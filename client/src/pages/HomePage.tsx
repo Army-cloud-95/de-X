@@ -9,12 +9,24 @@ const HomePage = () => {
 
   useEffect(() => {
     setUserID(localStorage.getItem("userID"))
+    
+    // Check if this is the first load in this session
+    const hasReloaded = sessionStorage.getItem('hasReloaded')
+    if (!hasReloaded) {
+      // Set the flag before reloading to prevent infinite loop
+      sessionStorage.setItem('hasReloaded', 'true')
+      // Small timeout to ensure any initialization is complete
+      setTimeout(() => window.location.reload(), 10)
+    }
   }, [])
 
-  if (!userID) return null
+
+  if (!userID) {
+    return null
+  }
 
   return (
-    <div className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl h-screen flex flex-col">
+    <div className="min-h-screen bg-slate-900 rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl h-screen flex flex-col">
       {/* Header */}
       <div className="sticky top-0 z-10 backdrop-blur-xl bg-slate-900/80 border-b border-slate-700/50">
         <div className="px-6 py-5">

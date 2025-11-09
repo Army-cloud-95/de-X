@@ -34,7 +34,7 @@ const Bookmarks = () => {
             <h1 className="text-xl font-bold" style={{ fontFamily: "Roboto" }}>
               Bookmarks
             </h1>
-            <p className="text-sm text-gray-500">@{localStorage.getItem("userID")}</p>
+            <div className="text-sm text-gray-500">@{localStorage.getItem("userID")}</div>
           </div>
         </div>
       </div>

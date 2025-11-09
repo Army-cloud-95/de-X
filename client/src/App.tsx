@@ -20,13 +20,13 @@ const AppLayout = () => {
       {!isLoginPage && <LeftSideBar />}
       <div className={`flex-grow ${!isLoginPage ? "ml-20 lg:ml-80" : ""}`}>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/explore" element={<ExplorePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/profile/:userID" element={<ProfilePage />} />
-          <Route path="/:userID/status/:id" element={<TweetThread />} />
-          <Route path="/bookmarks" element={<Bookmarks />} />
+          <Route path="" element={<LoginPage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path="explore" element={<ExplorePage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="profile/:userID" element={<ProfilePage />} />
+          <Route path=":userID/status/:id" element={<TweetThread />} />
+          <Route path="bookmarks" element={<Bookmarks />} />
         </Routes>
       </div>
 

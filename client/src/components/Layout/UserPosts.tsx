@@ -149,28 +149,28 @@ const UserPosts = ({ tweets, isProfile }: UserPostsProps) => {
                     />
                     <div className="flex flex-col">
                       <div className="flex flex-col sm:flex-row ml-2">
-                        <p
+                        <div
                           className="font-semibold text-white mr-2 cursor-pointer"
                           style={{ fontFamily: "Roboto" }}
                           onClick={() => navigate(`/profile/${tweet.authorID}`)}
                         >
                           {tweet.reposter}
-                        </p>
-                        <p
+                        </div>
+                        <div
                           className="text-sm mr-2 text-gray-500 cursor-pointer"
                           style={{ fontFamily: "Roboto" }}
                           onClick={() => navigate(`/profile/${tweet.authorID}`)}
                         >
                           @{tweet.reposterID}
-                        </p>
-                        <p
+                        </div>
+                        <div
                           className="text-sm text-gray-500"
                           style={{ fontFamily: "Roboto" }}
                         >
                           {tweet.date} {tweet.month}
-                        </p>
+                        </div>
                       </div>
-                      <p
+                      <div
                         className="cursor-pointer ml-2"
                         onClick={() =>
                           navigate(`/${tweet.reposterID}/status/${tweet.id}`, {
@@ -179,7 +179,7 @@ const UserPosts = ({ tweets, isProfile }: UserPostsProps) => {
                         }
                       >
                         reposted
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -200,29 +200,29 @@ const UserPosts = ({ tweets, isProfile }: UserPostsProps) => {
                 <div className="flex flex-col ml-2">
                   <div className="flex flex-col sm:flex-row justify-between">
                     <div className="flex flex-row">
-                      <p
+                      <div
                         className="font-semibold mr-2 cursor-pointer"
                         style={{ fontFamily: "Roboto" }}
                         onClick={() => navigate(`/profile/${tweet.authorID}`)}
                       >
                         {tweet.name}
-                      </p>
-                      <p
+                      </div>
+                      <div
                         className="text-sm mr-2 text-gray-500 cursor-pointer"
                         style={{ fontFamily: "Roboto" }}
                         onClick={() => navigate(`/profile/${tweet.authorID}`)}
                       >
                         @{tweet.authorID}
-                      </p>
-                      <p
+                      </div>
+                      <div
                         className="text-sm text-gray-500"
                         style={{ fontFamily: "Roboto" }}
                       >
                         {tweet.date} {tweet.month}
-                      </p>
+                      </div>
                     </div>
                   </div>
-                  <p
+                  <div
                     className="cursor-pointer"
                     onClick={() =>
                       navigate(`/${tweet.authorID}/status/${tweet.id}`, {
@@ -231,7 +231,7 @@ const UserPosts = ({ tweets, isProfile }: UserPostsProps) => {
                     }
                   >
                     {tweet.content}
-                  </p>
+                  </div>
 
                   {mediaElements[tweet.id] !== undefined ? (
                     mediaElements[tweet.id]

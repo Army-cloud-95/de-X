@@ -207,10 +207,10 @@ const LeftSideBar = () => {
             className="w-10 h-10 rounded-full bg-white flex-shrink-0"
           />
           <div className="hidden lg:flex flex-col flex-1 min-w-0">
-            <p className="font-semibold text-sm truncate">{user?.name}</p>
-            <p className="text-gray-500 text-sm truncate">
+            <div className="font-semibold text-sm truncate">{user?.name}</div>
+            <div className="text-gray-500 text-sm truncate">
               @{generateUserID(address) || usernameID}
-            </p>
+            </div>
           </div>
 
           <button

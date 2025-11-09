@@ -27,6 +27,7 @@ const UsernameModal = ({
     };
 
   const handleSetUserName = () => {
+    window.location.reload();
     localStorage.setItem("userID", userName.username);
     toggleUsernameModal();
     navigate("/home");
